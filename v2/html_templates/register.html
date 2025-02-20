@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Вход</title>
+    <link rel="stylesheet" href="/v2/css/type1-index-thin-column.css" />
+  </head>
+  <body>
+    <div class="Content">
+      <p id="BoardName">Cchan</p>
+
+      <hr />
+      <p class="nav">
+        <a href="/v2">Доски</a> | <a class="Active" href=""> Вход </a> |
+        <a href="/v2/test"> admin </a>
+      </p>
+      <hr class=" " />
+
+      {{if .loginErr }}
+      <p class="error-text">текст ошибки: {{ .loginErr }}</p>
+      {{end}}
+
+      <form
+        class="login-form"
+        action=""
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <fieldset>
+          <legend>Регистрация</legend>
+          <p>
+            <input
+              type="text"
+              name="login"
+              placeholder="логин"
+              pattern="^[a-zA-Z](\w|-){3,49}"
+              title="должен начинаться с буквы, дальше любые буквы, цифры, - _. Длинна не менее 4х символов"
+              autocomplete="off"
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              name="password"
+              placeholder="пароль"
+              pattern="(\w|-){4,49}"
+              autocomplete="off"
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              name="invite-code"
+              placeholder="инвайт код"
+              autocomplete="off"
+            />
+          </p>
+          <p>
+            <input class="button" type="submit" value="Регистрация" />
+          </p>
+        </fieldset>
+      </form>
+
+      <footer>
+        <hr class=" " />
+        <p>
+          ⛄ <span id="FooterTextNoEmoji" class="Title"><i>2025</i></span> ⛄
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/v2/css/type2-other-wide-column.css" />
+    <link rel="stylesheet" href="/v2/lightbox/css/lightbox.min.css" />
+    <script src="/v2/js/script.js"></script>
+    <title>Посты</title>
+  </head>
+  <body>
+    <div class="Content">
+      <div class="nav"><a href="/v2/">Главная</a> | <a href="">Выход</a></div>
+      <hr />
+      <div id="board-name" class="ruslan-display-regular">{{ .boardName }}</div>
+
+      <div class="thread-form">
+        <div class="thread-form-on-off" id="on-off-1">
+          <form action="" method="post" enctype="multipart/form-data">
+            <!-- <textarea name="text" id=""></textarea>
+            <label class="__lk-fileInput">
+              <span data-default="Choose file">Choose file</span>
+              <input type="file" name="name-for-file" />
+            </label>
+            <input type="submit" value="Отправить" /> -->
+            <fieldset>
+              <textarea name="text" id=""></textarea>
+              <div class="btns">
+                <!-- button 1 -->
+                <label class="__lk-fileInput">
+                  <span data-default="Choose file">Choose file</span>
+                  <input id="file-upload" type="file" name="name-for-file" />
+                </label>
+                <!-- button 2 -->
+                <input type="submit" value="Отправить" />
+              </div>
+            </fieldset>
+          </form>
+          <hr />
+        </div>
+      </div>
+
+      <button
+        class="button"
+        id="button-on-off-1"
+        onclick="toggle_div_fun('on-off-1', 'button-on-off-1', ['Ответить']);"
+      >
+        Ответить
+      </button>
+
+      <hr />
+      <div id="id1" class="op-post post">
+        <p class="post-info">аноним 12:00 27/2/2025 #{{ .OP_post.Post_id }}</p>
+
+        <!-- <img src="/v2/loaded_img/{{ .OP_post.ImageUrl}}" alt="" /> -->
+
+        <a
+          href="/v2/loaded_img/{{ .OP_post.ImageUrl }}"
+          data-lightbox="roadtrip"
+          ><img src="/v2/loaded_img/{{ .OP_post.ImageUrl }}"
+        /></a>
+
+        <span> {{ .OP_post.Text }} </span>
+      </div>
+
+      {{ range .payload }}
+      <div class="post">
+        <p class="post-info">аноним 12:00 27/2/2025 #{{ .Post_id }}</p>
+
+        <!-- <img src="/v2/loaded_img/{{ .ImageUrl }}" alt="" /> -->
+
+        {{if len .ImageUrl }}
+        <a href="/v2/loaded_img/{{ .ImageUrl }}" data-lightbox="roadtrip"
+          ><img src="/v2/loaded_img/{{ .ImageUrl }}"
+        /></a>
+        {{ end }}
+
+        <span> {{ .Text }} </span>
+      </div>
+      {{ end }}
+
+      <div class="thread-form hidden">
+        <div class="thread-form-on-off" id="on-off-2">
+          <form action="">
+            <textarea name="" id=""></textarea>
+            <label class="__lk-fileInput">
+              <span data-default="Choose file">Choose file</span>
+              <input type="file" />
+            </label>
+
+            <input type="submit" value="Отправить" />
+          </form>
+          <hr />
+        </div>
+      </div>
+      <button
+        class="hidden"
+        id="button-on-off-2"
+        onclick="toggle_div_fun('on-off-2', 'button-on-off-2', ['Ответить']);"
+      >
+        Ответить
+      </button>
+
+      <footer>
+        <hr class=" " />
+        <p>
+          ⛄ <span id="FooterTextNoEmoji" class="Title"><i>2025</i></span> ⛄
+        </p>
+      </footer>
+    </div>
+    <script src="/v2/lightbox/js/lightbox-plus-jquery.min.js"></script>
+  </body>
+</html>

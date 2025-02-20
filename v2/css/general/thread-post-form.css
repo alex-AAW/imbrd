@@ -1,0 +1,102 @@
+@import url(login-form.css);
+
+.thread-form {
+  clear: both;
+
+  width: 33%;
+  min-width: 350px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--color-3-darkgree);
+}
+
+.thread-form-on-off {
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+}
+
+.thread-form-on-off > form > *,
+.thread-form-on-off > form span {
+  display: block;
+  border-radius: 5px;
+}
+
+.thread-form-on-off > form > * {
+  margin-bottom: 5px;
+}
+
+.thread-form-on-off > form > *,
+.thread-form > button {
+  display: block;
+  /* margin: 0 auto; */
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#real-input {
+  /* visibility: hidden; */
+  height: auto;
+  background-color: aqua;
+}
+
+/* Buttons */
+html body input[type="submit"],
+html body .__lk-fileInput {
+  display: inline-block;
+  width: 48%;
+  margin: 0 0;
+  margin-bottom: 5px;
+  padding: 2px 10px;
+
+  background: none;
+  border: 1px solid var(--hr-color);
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 1em;
+  text-align: center;
+  line-height: 25px;
+  color: var(--text_black_color);
+}
+
+/* New styles */
+
+.button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+fieldset {
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+fieldset textarea {
+  padding: 10px;
+}
+
+.btns {
+  margin: 0 auto;
+  /* background-color: lightgreen; */
+  width: 80%;
+}

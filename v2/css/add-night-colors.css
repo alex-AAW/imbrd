@@ -1,0 +1,30 @@
+body {
+  background-color: var(--color_5);
+  color: #eeee;
+}
+
+.Content {
+  background-color: var(--color_4);
+}
+
+#BoardName {
+  color: #eeee;
+}
+
+.nav,
+.nav a {
+  color: #eeee;
+}
+
+hr {
+  border-color: #eeee;
+}
+
+.Boards a {
+  color: #eeee;
+}
+
+#FooterTextNoEmoji {
+  color: #fffe;
+  text-shadow: none;
+}

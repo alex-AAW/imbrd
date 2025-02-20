@@ -1,0 +1,24 @@
+a[href*="/pr/"]:hover::after {
+  content: " 💻";
+  font-size: 99%;
+}
+
+a[href*="/math/"]:hover::after {
+  content: " 📗";
+  font-size: 99%;
+}
+
+a[href*="/ra/"]:hover::after {
+  content: " 📻 ";
+  font-size: 99%;
+}
+
+a[href*="/skuf/"]:hover::after {
+  content: " 👨🏻‍🦲";
+  font-size: 99%;
+}
+
+a[href*="/mc/"]:hover::after {
+  content: " ⛏️ ";
+  font-size: 99%;
+}

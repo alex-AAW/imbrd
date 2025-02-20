@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная</title>
+    <link rel="stylesheet" href="/v2/css/type1-index-thin-column.css" />
+  </head>
+  <body>
+    <div class="Content">
+      <p id="BoardName">Cchan</p>
+      <i id="Caption">{{ .Caption.C }}</i>
+      <div class="Billboard">
+        <img src="img/{{ .Caption.I }}" />
+      </div>
+
+      <p class="nav">
+        <a class="Active" href="/v2/">Доски</a> |
+        <a href="/v2/login"> Вход </a> |
+        <a href="/v2/test"> admin </a>
+      </p>
+      <hr class=" " />
+      <div class="Boards">
+        <ul>
+          {{ range .payload }}
+          <li>
+            <a href="/v2/threads/{{ .Url }}/">/{{ .Url }}/ {{ .Name }} </a>
+          </li>
+          {{ end }}
+
+          <li><a href="/v2/404"> /ua/ перемога </a></li>
+        </ul>
+      </div>
+      <footer>
+        <hr class=" " />
+        <p>
+          ⛄ <span id="FooterTextNoEmoji" class="Title"><i>2025</i></span> ⛄
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+@import url(main.css);
+@import url(/v2/css/general/login-form.css);
+
+/* отцентровать внешними отступами для всех элементов */
+/* .Billboard ~ * {
+  width: auto;
+  height: auto;
+  margin: 5px 20%;
+} */
+
+/* отцентровать внутренним отступом для содержащего блока */
+.Content {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* correct collumn width */
+
+/* type specific elements */
+
+#BoardName {
+  font-size: 55pt;
+  font-weight: bold;
+  color: var(--board_name);
+  margin: 0px 0 10px 0;
+}
+
+#BoardName::first-letter {
+  color: var(--color_2);
+  font-size: 1.2em;
+}
+
+#Caption {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  color: var(--text_color);
+  font-style: italic;
+}
+
+.not-found {
+  margin-top: 100px;
+  font-size: 8em;
+  font-weight: bold;
+}
+
+.not-found-caption {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.Billboard {
+  width: 100%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.Billboard img {
+  height: 100%;
+  border: 5px solid var(--border_color);
+  border-radius: 5px;
+}
+
+/* .content, */
+/* .Content, */
+/* .Billboard, */
+/* .Billboard > img, */
+.Debug {
+  /* border: 5px solid var(--border_color); */
+  border: 5px solid black;
+}

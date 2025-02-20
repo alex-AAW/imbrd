@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/v2/css/type1-index-thin-column.css" />
+    <link rel="stylesheet" href="/v2/css/general/buttons.css" />
+    <link rel="stylesheet" href="/v2/css/general/admin-form.css" />
+    <title>Админ панель</title>
+  </head>
+  <body>
+    <div class="Content">
+      <p id="BoardName">Cchan</p>
+
+      <hr />
+
+      <p class="nav">
+        <a href="/v2/">Доски</a> | <a href="/v2/login"> Вход </a> |
+        <a class="Active" href="/v2/test"> admin </a>
+      </p>
+
+      <hr />
+      <p class="button-label">Управление BD</p>
+      <hr />
+
+      <div class="Boards">
+        <ul>
+          <li>
+            <a href="" class="button"> Clean boards </a>
+          </li>
+          <li>
+            <a href="" class="button"> Clean posts </a>
+          </li>
+          <li>
+            <a href="/v2/flush" class="button button-with-warning-stile">
+              Clean all
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <hr class=" " />
+
+      <p class="jersey-10-regular">Form test</p>
+      <p class="error-text">текст ошибки: {{ .Info }}</p>
+
+      <div class="form">
+        <form
+          class="imgUploader"
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <legend>Тестовая форма</legend>
+            <p>
+              <input
+                type="text"
+                name="login"
+                placeholder="логин"
+                pattern="^[a-zA-Z](\w|-){3,49}"
+                title="должен начинаться с буквы, дальше любые буквы, цифры, - _. Длинна не менее 4х символов"
+              />
+            </p>
+            <p>
+              <input
+                type="password"
+                name="password"
+                placeholder="пароль"
+                pattern="^[a-zA-Z](\w|-){3,49}"
+              />
+            </p>
+            <p>
+              <textarea name="post-text" placeholder="сообщение"></textarea>
+            </p>
+
+            <input id="file-upload" type="file" name="name-for-file" />
+
+            <p>
+              <input class="submit-button" type="submit" value="Отправить" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- Create board form -->
+      <div class="form">
+        <form
+          class="imgUploader"
+          action="/v2/boards"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <legend>Создать борду</legend>
+            <p>
+              <input type="text" name="url" placeholder="url" />
+            </p>
+            <p>
+              <input type="text" name="name" placeholder="name" />
+            </p>
+            <p>
+              <textarea name="title" placeholder="описание"></textarea>
+            </p>
+            <p>
+              <input class="submit-button" type="submit" value="Отправить" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="Spring"></div>
+      <footer>
+        <hr class=" " />
+        <p>
+          ⛄ <span id="FooterTextNoEmoji" class="Title"><i>2025</i></span> ⛄
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

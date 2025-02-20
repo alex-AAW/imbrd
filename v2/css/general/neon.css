@@ -1,0 +1,59 @@
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+.neonTextPulsate {
+  animation: pulsate 2.5s infinite alternate;
+  color: #fff;
+}
+
+.neonTextNoFlicker {
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+    0 0 40px var(--neon-color), 0 0 80px var(--neon-color),
+    0 0 90px var(--neon-color), 0 0 100px var(--neon-color),
+    0 0 150px var(--neon-color);
+}
+
+:root {
+  --neon-color: rgb(67, 109, 200);
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px var(--neon-color), 0 0 80px var(--neon-color),
+      0 0 90px var(--neon-color), 0 0 100px var(--neon-color),
+      0 0 150px var(--neon-color);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px var(--neon-color), 0 0 80px var(--neon-color),
+      0 0 90px var(--neon-color), 0 0 100px var(--neon-color),
+      0 0 150px var(--neon-color);
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff,
+      0 0 10px var(--neon-color), 0 0 45px var(--neon-color),
+      0 0 55px var(--neon-color), 0 0 70px var(--neon-color),
+      0 0 80px var(--neon-color);
+  }
+}

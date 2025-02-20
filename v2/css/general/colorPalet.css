@@ -1,0 +1,19 @@
+:root {
+  --color_1: #f8e9a1;
+  --color_2: #f76c6c;
+  --color_3: #a8d0e6;
+  --color_4: #374785;
+  --color_5: #24305e;
+
+  --saved_borer_color: rgba(168, 168, 168, 0.15);
+  --saved_body_background: #eff6fa;
+
+  --body_background: var(--color_3);
+  --board_name: var(--color_5);
+  --content_background: var(--saved_body_background);
+  --text_color: var(--color_4);
+
+  --text_black_color: #222c;
+  --border_color: var(--saved_borer_color);
+  --hr-color: #3333;
+}

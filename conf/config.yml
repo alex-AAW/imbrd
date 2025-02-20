@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+BD:
+  params: "host=127.0.0.1 port=5432 user=test1 dbname=test1 sslmode=disable password=1337pass"
+
+cookie_salt: "08652e61a5d7f2fd53ea2dd7aecbf351990d3d4cfbf6e5f3766b68dd7769ba86"
+INVITE_COD: "ROG PIAR"

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/v2/css/type2-other-wide-column.css" />
+    <link rel="stylesheet" href="/v2/lightbox/css/lightbox.min.css" />
+
+    <script src="../js/script.js"></script>
+    <title>{{ .Board }}</title>
+  </head>
+  <body>
+    <div class="Content">
+      <div class="nav"><a href="/v2/">Главная</a> | <a href="">Выход</a></div>
+      <hr />
+      <div id="board-name" class="ruslan-display-regular">{{ .Board }}</div>
+
+      <div class="thread-form">
+        <div class="thread-form-on-off" id="on-off-1">
+          <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <textarea name="op-post" id=""></textarea>
+              <div class="btns">
+                <!-- button 1 -->
+                <label class="__lk-fileInput">
+                  <span data-default="Choose file">Choose file</span>
+                  <input id="file-upload" type="file" name="name-for-file" />
+                </label>
+                <!-- button 2 -->
+                <input type="submit" value="Отправить" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <button
+        class="button"
+        id="button-on-off"
+        onclick="toggle_div_fun('on-off-1', 'button-on-off', ['Создать тред']);"
+      >
+        Создать тред
+      </button>
+
+      {{ range .payload }}
+      <hr />
+
+      <div id="id{{ .OP_post_id }}" class="op-post post">
+        <p class="post-info">
+          аноним 12:00 27/2/2025 #{{ .OP_post_id }}
+          <a href="/v2/threads/{{ $.BoardUrl }}/{{ .ID }}">ответить</a>
+        </p>
+
+        <!-- <img src="/v2/loaded_img/{{ .ImageUrl }}" alt="" /> -->
+
+        <a href="/v2/loaded_img/{{ .ImageUrl }}" data-lightbox="roadtrip"
+          ><img src="/v2/loaded_img/{{ .ImageUrl }}"
+        /></a>
+
+        <span> {{ .Text }} </span>
+        <p class="post-info">Коментариев: unkown</p>
+      </div>
+      {{ end }}
+
+      <!-- <hr />
+      <div id="id1" class="op-post post">
+        <p class="post-info">
+          аноним 12:00 27/2/2025 #1 <a href="">ответить</a>
+        </p>
+        <img src="/v2/img/long_cat.jpg" alt="" />
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+          obcaecati alias doloremque atque iusto temporibus nostrum, error vel
+          velit nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quam obcaecati alias doloremque atque iusto temporibus nostrum,
+          error vel velit nesciunt. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Quam obcaecati alias doloremque atque iusto
+          temporibus nostrum, error vel velit nesciunt. Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Quam obcaecati alias doloremque
+          atque iusto temporibus nostrum, error vel velit nesciunt. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Quam obcaecati alias
+          doloremque atque iusto temporibus nostrum, error vel velit nesciunt.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+          obcaecati alias doloremque atque iusto temporibus nostrum, error vel
+          velit nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quam obcaecati alias doloremque atque iusto temporibus nostrum,
+          error vel velit nesciunt. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Quam obcaecati alias doloremque atque iusto
+          temporibus nostrum, error vel velit nesciunt. Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Quam obcaecati alias doloremque
+          atque iusto temporibus nostrum, error vel velit nesciunt.
+        </span>
+        <p class="post-info">Коментариев: 3</p>
+      </div>
+      <div class="post">
+        <p class="post-info">
+          аноним 12:00 27/2/2025 #1 <a href="">ответить</a>
+        </p>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          ratione perspiciatis voluptas accusantium illum ad illo fugiat, sunt
+          minus tenetur tempora dignissimos ipsam maxime odit possimus officiis
+          reiciendis fuga. Totam neque dolore fugit laborum. Assumenda, porro
+          amet ipsam fugit consequuntur, ipsa dolor libero obcaecati quia,
+          quidem iste. Voluptates, laudantium molestias!
+        </span>
+      </div>
+      <div class="post">
+        <p class="post-info">
+          аноним 12:00 27/2/2025 #1 <a href="">ответить</a>
+        </p>
+        <span>Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div class="post">
+        <p class="post-info">
+          аноним 12:00 27/2/2025 #1 <a href="">ответить</a>
+        </p>
+        <span>Lorem ipsum dolor sit amet.</span>
+      </div> -->
+      <footer>
+        <hr />
+        <p>
+          ⛄ <span id="FooterTextNoEmoji" class="Title"><i>2025</i></span> ⛄
+        </p>
+      </footer>
+    </div>
+    <script src="/v2/lightbox/js/lightbox-plus-jquery.min.js"></script>
+  </body>
+</html>

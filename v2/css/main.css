@@ -1,0 +1,153 @@
+/*
+main.css
+Общая часть стилей, которая наследуется обоими типами страниц
+*/
+
+@import url(./general/reset.css);
+@import url(./general/colorPalet.css);
+
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  transition: all 0.2s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Все ссылки */
+:link,
+:visited {
+  text-decoration: none;
+  color: var(--text_color);
+  border-bottom: 1px dashed var(--text_color);
+}
+
+a:hover {
+  color: var(--color_2);
+  border-bottom: 1px dashed var(--color_2);
+}
+
+/* Page styles */
+html,
+body {
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: var(--body_background);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14pt;
+  color: var(--text_color);
+  overflow: scroll;
+  overflow-x: visible;
+}
+
+html body .Content {
+  position: relative;
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  /* padding-bottom: 30px; */
+  padding-bottom: 55px;
+  padding-top: 15px;
+}
+
+.Content {
+  background-color: var(--content_background);
+}
+
+.Content {
+  border: none;
+  box-shadow: 0 0 0px 0px #eff6fa, 0 0 0px 2px #3333;
+  /* box-sizing: content-box; */
+}
+
+footer {
+  width: 50%;
+  margin: 0px auto;
+  padding: 0px 0px;
+  text-align: center;
+
+  line-height: 25px;
+
+  /* прижимаем блок к нижней границе относительно блока с position: relative*/
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+  right: 0px;
+}
+
+#FooterTextNoEmoji {
+  color: var(--color_4);
+  text-shadow: 0 1px 0 #fff;
+  /* line-height: 10px; */
+}
+
+/* details */
+hr {
+  border-top: 1px solid var(--hr-color);
+  /* border-top: 1px solid var(--border_color); */
+}
+
+.hidden {
+  display: none;
+}
+
+/* двухколоночный список */
+.Boards {
+  /* width: 60%; */
+  margin: 15px auto;
+  /* background-color: var(--content_background); */
+  text-align: center;
+  column-count: 2;
+}
+
+.Boards li {
+  list-style-type: none;
+  padding-top: 7px;
+}
+
+@media screen and (max-width: 1200px) {
+  .Boards {
+    column-count: 1;
+  }
+}
+
+/* навигация */
+.nav {
+  width: 60%;
+  margin: 15px auto;
+}
+
+.nav a.Active {
+  font-weight: bold;
+}
+
+.nav a.Active::before {
+  color: var(--color_2);
+  content: "> ";
+}
+
+.nav {
+  color: var(--board_name);
+}
+
+.nav a {
+  border: none;
+  color: var(--board_name);
+}
+
+.nav a:hover {
+  border: none;
+  color: var(--color_2);
+}

@@ -1,0 +1,85 @@
+@import url("main.css");
+@import url("./general/thread-post-form.css");
+@import url("//fonts.googleapis.com/css2?family=Jersey+10&family=Ruslan+Display&display=swap");
+
+/* New value for */
+.Content {
+  text-align: left;
+  color: var(--text_black_color);
+  padding: 0 10px;
+}
+
+footer {
+  width: auto;
+  left: 10px;
+  right: 10px;
+}
+
+/* Fonts */
+.ruslan-display-regular {
+  font-family: "Ruslan Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ruslan-display-regular::first-letter {
+  color: var(--color_2);
+  font-size: 1.8em;
+}
+
+.nav {
+  width: auto;
+  margin: 0px 10px;
+  margin-bottom: 5px;
+}
+
+/* Head */
+#board-name {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.post img {
+  float: left;
+  max-width: 250px;
+  max-height: 250px;
+  /* border-radius: 2px; */
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.post {
+  width: fit-content;
+  max-width: 80%;
+  margin-bottom: 5px;
+  background-color: var(--body_background);
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 10px;
+  padding-top: 2px;
+  box-shadow: 1px 1px 1px #3332;
+}
+
+.op-post {
+  box-shadow: none;
+  background-color: var(--content_background);
+  width: 100%;
+  max-width: none;
+}
+
+.post::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.post-info {
+  font-size: 0.8em;
+  color: #444;
+  margin: 5px 0;
+  clear: both;
+}

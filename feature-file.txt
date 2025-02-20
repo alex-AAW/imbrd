@@ -1,1 +1,3 @@
-Feature text file 4
+Change feature text
+
+New line
